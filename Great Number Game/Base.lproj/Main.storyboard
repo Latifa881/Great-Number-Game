@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Great_Number_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to The Great Number Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l60-E4-Esr">
+                                <rect key="frame" x="20" y="74" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mv6-Uv-VMm">
+                                <rect key="frame" x="0.0" y="126" width="414" height="770"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am thinking of  a number between 1 and 100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TB3-fH-CDn">
+                                        <rect key="frame" x="10" y="60" width="394" height="55"/>
+                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="30"/>
+                                        <color key="textColor" red="0.0016618946100000001" green="0.26401612159999999" blue="0.4611311555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a guess !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6K-Je-N6d">
+                                        <rect key="frame" x="10" y="180" width="394" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="30"/>
+                                        <color key="textColor" red="0.0016618946100000001" green="0.26401612159999999" blue="0.4611311555" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vX0-rU-nuC">
+                                        <rect key="frame" x="50" y="237.5" width="314" height="52.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3a-lQ-6nO">
+                                        <rect key="frame" x="164" y="340" width="86.5" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Submit">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qpw-Nt-joF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="m3a-lQ-6nO" firstAttribute="centerX" secondItem="mv6-Uv-VMm" secondAttribute="centerX" id="0to-5M-mGB"/>
+                                    <constraint firstItem="vX0-rU-nuC" firstAttribute="leading" secondItem="mv6-Uv-VMm" secondAttribute="leading" constant="50" id="9AC-9I-ez1"/>
+                                    <constraint firstItem="TB3-fH-CDn" firstAttribute="top" secondItem="mv6-Uv-VMm" secondAttribute="top" constant="60" id="JpU-xn-NQK"/>
+                                    <constraint firstItem="f6K-Je-N6d" firstAttribute="leading" secondItem="mv6-Uv-VMm" secondAttribute="leading" constant="10" id="PeH-hC-em8"/>
+                                    <constraint firstItem="TB3-fH-CDn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mv6-Uv-VMm" secondAttribute="leading" id="PiX-cA-zyK"/>
+                                    <constraint firstItem="f6K-Je-N6d" firstAttribute="centerX" secondItem="mv6-Uv-VMm" secondAttribute="centerX" id="XP7-bn-CDP"/>
+                                    <constraint firstItem="m3a-lQ-6nO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mv6-Uv-VMm" secondAttribute="leading" id="XVh-eh-VXX"/>
+                                    <constraint firstAttribute="trailing" secondItem="TB3-fH-CDn" secondAttribute="trailing" constant="10" id="fv9-nJ-rX4"/>
+                                    <constraint firstItem="TB3-fH-CDn" firstAttribute="centerX" secondItem="mv6-Uv-VMm" secondAttribute="centerX" id="g5T-Vo-bLe"/>
+                                    <constraint firstItem="m3a-lQ-6nO" firstAttribute="top" secondItem="vX0-rU-nuC" secondAttribute="bottom" constant="50" id="jgR-AL-BRY"/>
+                                    <constraint firstItem="vX0-rU-nuC" firstAttribute="centerX" secondItem="mv6-Uv-VMm" secondAttribute="centerX" id="kU2-Ac-IzP"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m3a-lQ-6nO" secondAttribute="trailing" id="kjk-hB-WUc"/>
+                                    <constraint firstItem="vX0-rU-nuC" firstAttribute="top" secondItem="f6K-Je-N6d" secondAttribute="bottom" constant="30" id="rqz-tm-mWw"/>
+                                    <constraint firstItem="f6K-Je-N6d" firstAttribute="top" secondItem="TB3-fH-CDn" secondAttribute="bottom" constant="65" id="ynJ-P2-ryU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mv6-Uv-VMm" secondAttribute="bottom" id="3vl-N7-YY0"/>
+                            <constraint firstItem="l60-E4-Esr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BRK-Fp-avY"/>
+                            <constraint firstItem="l60-E4-Esr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="BgT-q6-3N2"/>
+                            <constraint firstItem="mv6-Uv-VMm" firstAttribute="top" secondItem="l60-E4-Esr" secondAttribute="bottom" constant="13.5" id="YMo-fP-jGs"/>
+                            <constraint firstItem="l60-E4-Esr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ydW-5k-4NQ"/>
+                            <constraint firstItem="mv6-Uv-VMm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ypm-no-blH"/>
+                            <constraint firstItem="mv6-Uv-VMm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z5E-p6-JcZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guessNumTextField" destination="vX0-rU-nuC" id="pBb-3c-dcx"/>
+                        <outlet property="mainView" destination="mv6-Uv-VMm" id="RxB-ue-XXp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
